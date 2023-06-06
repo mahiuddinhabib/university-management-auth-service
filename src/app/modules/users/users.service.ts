@@ -3,7 +3,7 @@ import { IUser } from "./users.interface";
 import { User } from "./users.model";
 import { generateUserId } from "./users.utils";
 
-const createUser = async (user: IUser):Promise<IUser | null> => {
+const createUserToDB = async (user: IUser):Promise<IUser | null> => {
 
     const id = await generateUserId();
 
@@ -23,5 +23,5 @@ const createUser = async (user: IUser):Promise<IUser | null> => {
 
 
 export default {
-    createUser
+    createUserToDB
 }
